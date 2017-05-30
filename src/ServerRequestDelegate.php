@@ -4,7 +4,6 @@ namespace Hiraeth\Guzzle;
 
 use Hiraeth;
 use GuzzleHttp;
-use Auryn;
 
 /**
  *
@@ -43,10 +42,10 @@ class ServerRequestDelegate implements Hiraeth\Delegate
 	 * Get the instance of the class for which the delegate operates.
 	 *
 	 * @access public
-	 * @param Auryn\Injector $broker The dependency injector instance
+	 * @param Hiraeth\Broker $broker The dependency injector instance
 	 * @return Object The instance of the class for which the delegate operates
 	 */
-	public function __invoke(Auryn\Injector $broker)
+	public function __invoke(Hiraeth\Broker $broker)
 	{
 		return GuzzleHttp\Psr7\ServerRequest::fromGlobals();
 	}
